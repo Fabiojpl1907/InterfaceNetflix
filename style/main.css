@@ -1,0 +1,51 @@
+/* declarar vaiaveis */
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+    --menu: #AAA;
+    --mouseOver: #fff;
+
+}
+   
+
+/* reseting CSS -  "*" indica todo o docuemnto  */
+ *{
+     margin: 0;
+     padding: 0; /* A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+     box-sizing: border-box; /* tofo contrudo vai ficar dentro da borda . não ultrapassa a borda*/
+
+ }
+
+
+/* defino a formatação do container Body */
+body{ 
+    background: var(--preto);
+    /* define fonte principal e substituitas */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container { /* definfindo o posicionamento da caixa "container"*/
+    display: flex;
+    flex-direction: row;  /* row ja é padrao mesmo se nao for colocado */
+    align-items: center;
+    justify-content: space-between; /* ajusta as tags dentro da tag mãe */
+
+}
+
+.logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--menu) ;
+    margin-right: 10px;
+}
+
+/* definindo cor do menu , quando passar o mouse sobre ele */
+header nav a:hover{
+    color: Var(--mouseOver);
+}
