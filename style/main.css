@@ -1,4 +1,5 @@
 /* declarar vaiaveis */
+/* projeto de aula - Fábio José */
 :root{
     --vermelho: #E50914;
     --preto: #141414;
@@ -12,7 +13,7 @@
  *{
      margin: 0;
      padding: 0; /* A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas.*/
-     box-sizing: border-box; /* tofo contrudo vai ficar dentro da borda . não ultrapassa a borda*/
+     box-sizing: border-box; /* todo conteudo vai ficar dentro da borda . não ultrapassa a borda*/
 
  }
 
@@ -21,10 +22,11 @@
 body{ 
     background: var(--preto);
     /* define fonte principal e substituitas */
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Arial', Times, serif;
+    color: white;
 }
 
-.container { /* definfindo o posicionamento da caixa "container"*/
+header .container { /* definfindo o posicionamento da caixa "container"*/
     display: flex;
     flex-direction: row;  /* row ja é padrao mesmo se nao for colocado */
     align-items: center;
@@ -32,10 +34,10 @@ body{
 
 }
 
-.logo{
+header .logo{
     margin-left: 5px;
     color: var(--vermelho);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Arial Black', Times;
     font-size: 40px;
 }
 
@@ -48,4 +50,74 @@ header nav a{
 /* definindo cor do menu , quando passar o mouse sobre ele */
 header nav a:hover{
     color: Var(--mouseOver);
+}
+
+/* Filme principal */
+.filme-principal{
+    font-size: 16px;
+    /*linear gradiente cria uma camada fina sobre a imegem , aumento o contraste*/
+    background: linear-gradient( rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa-star.jpg');
+    height: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* inicia a esquerda */ 
+
+}
+
+.filme-principal .descricao{
+   margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.filme-principal .titulo{
+    margin-top: 5%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-principal .botao{
+
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px ;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+
+    /* suavizar transiáo quanto o mouse passa por cima */
+    transition: .3s ease all;
+}
+/* invertendo cores ao passar o kouse*/
+.botao:hover{
+    background: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 7px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+
+    /* prender o texto dentro de um espaço maximo px ou % */
+    width: 400px;
+
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+
+}
+
+.carrosel-filmes{
+    margin-top: 10 px;
 }
